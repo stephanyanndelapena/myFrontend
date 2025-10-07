@@ -10,9 +10,10 @@ const styles = StyleSheet.create({
     },
 
     homepageImage: {
-        width: 170,
-        height: 170,
+        width: 150,
+        height: 150,
         alignSelf: 'center',
+        marginBottom: 30,
     },
 
     homepageText: {
@@ -68,7 +69,49 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         width: '90%',
-    }
+    },
+
+    listContainer: {
+        flex: 1,
+        width: '100%',
+        paddingTop: 50,
+        backgroundColor: '#ffddf4ff',
+        alignItems: 'center',
+    },
+    listHeader: {
+        fontSize: 28,
+        fontWeight: 'bold',
+        color: '#c954c3ff',
+        textAlign: 'center',
+        marginBottom: 20,
+        paddingTop: 10,
+    },
+     userCard: {
+        width: 350,
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        padding: 15,
+        marginBottom: 10,
+        alignSelf: 'center',
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.2,
+        shadowRadius: 1.41,
+    },
+    userCardName: {
+        fontSize: 18,
+        fontWeight: 'bold', 
+        color: '#c954c3ff', 
+        textAlign: 'center', 
+        marginBottom: 5,
+    },
+
+    userDataText: {
+        fontSize: 16,
+        color: '#000000ff',
+        paddingVertical: 3,
+    },
 });
 
 export default styles;

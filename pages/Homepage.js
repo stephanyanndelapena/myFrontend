@@ -18,6 +18,14 @@ export default function Homepage({ navigation }) {
                     onPress={() => navigation.navigate('Register')} 
                 />
             </View>
+
+            <View style={styles.buttonWrapper}>
+                <Button 
+                    title="View User"
+                    color="#c954c3ff"
+                    onPress={() => navigation.navigate('UserList')} />
+                
+            </View>
         </View>
     );
 }
