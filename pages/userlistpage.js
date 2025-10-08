@@ -7,7 +7,7 @@ export default function UserListPage({navigation}) {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/registration/api/users/")
+        axios.get("http://192.168.20.109:8000/registration/api/users/")
             .then((res) => {
                 setUsers(res.data);
             })
@@ -31,7 +31,7 @@ export default function UserListPage({navigation}) {
                     text: "Delete",
                     style: "destructive",
                     onPress: () => {
-                        axios.delete(`http://127.0.0.1:8000/registration/api/users/${id}/`)
+                        axios.delete(`http://192.168.20.109:8000/registration/api/users/${id}/`)
                         .then(() => {
                             Alert.alert("Success", "User deleted successfully");
                         })
@@ -70,7 +70,7 @@ export default function UserListPage({navigation}) {
                              onPress={() => handleEdit(item)}/>
                              <View style={{height: 10}}/>
                             <Button title="Delete"
-                             color="#c954c3ff"
+                             color="#f84b4bff"
                              onPress={() => handleDelete(item.id)}/>
                         </View>
                     </View>
