@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         paddingTop: 10,
     },
-     userCard: {
-        width: 350,
+    userCard: {
+        width: 300,
         backgroundColor: '#fff',
         borderRadius: 8,
         padding: 15,
@@ -101,16 +101,25 @@ const styles = StyleSheet.create({
     },
     userCardName: {
         fontSize: 18,
-        fontWeight: 'bold', 
-        color: '#c954c3ff', 
-        textAlign: 'center', 
+        fontWeight: 'bold',
+        color: '#c954c3ff',
+        textAlign: 'center',
         marginBottom: 5,
     },
-
-    userDataText: {
+    userDataLabel: {
         fontSize: 16,
-        color: '#000000ff',
+        fontWeight: 'bold',
+        color: '#292828ff',
         paddingVertical: 3,
+    },
+    userDataValue: {
+        fontSize: 16,
+        paddingVertical: 3,
+    },
+    userCardButtons: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 10,
     },
 });
 
