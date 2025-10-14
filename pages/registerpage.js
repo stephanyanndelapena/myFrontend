@@ -1,7 +1,7 @@
 import { View, Text, Button } from 'react-native';
 import styles from '../styles';
 import { useState } from 'react';
-import { TextInput } from 'react-native-web';
+import { TextInput } from 'react-native';
 
 export default function RegisterPage({ navigation }) {
     const [formData, setFormData] = useState({

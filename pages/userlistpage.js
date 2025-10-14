@@ -7,7 +7,7 @@ export default function UserListPage({navigation}) {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get("http://192.168.20.109:8000/registration/api/users/")
+        axios.get("http://127.0.0.1:8000/registration/api/users/")
             .then((res) => {
                 setUsers(res.data);
             })
@@ -22,28 +22,30 @@ export default function UserListPage({navigation}) {
     }
 
     const handleDelete = (id) => {
-        Alert.alert(
-            "Confirm Delete",
-            "Are you sure you want to delete this user?",
-            (
-                { text: "Cancel", style: "cancel" },
-                { 
-                    text: "Delete",
-                    style: "destructive",
-                    onPress: () => {
-                        axios.delete(`http://192.168.20.109:8000/registration/api/users/${id}/`)
-                        .then(() => {
-                            Alert.alert("Success", "User deleted successfully");
-                        })
-                        .catch((err) => {
-                            console.error(err);
-                            Alert.alert("Error", "Failed to delete user");
-                        });
+        // Alert.alert(
+        //     "Confirm Delete",
+        //     "Are you sure you want to delete this user?",
+        //     (
+        //         { text: "Cancel", style: "cancel" },
+        //         { 
+        //             text: "Delete",
+        //             style: "destructive",
+        //             onPress: () => {
+        //                 axios.delete(`http://127.0.0.1:8000/registration/api/users/${id}/`)
+        //                 .then(() => {
+        //                     Alert.alert("Success", "User deleted successfully");
+        //                 })
+        //                 .catch((err) => {
+        //                     console.error(err);
+        //                     Alert.alert("Error", "Failed to delete user");
+        //                 });
 
-                    },
-                }
-            )
-        );
+        //             },
+        //         }
+        //     )
+        // );
+        
+        axios.delete(`http://127.0.0.1:8000/registration/api/users/${id}/`)
     };
     return (
         <View style={styles.listContainer}>
